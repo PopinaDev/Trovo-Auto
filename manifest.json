@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Trovo Tools By Sami",
+  "version": "1.0",
+  "description": "Auto-comment and emoji tools for Trovo.live streams",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.trovo.live/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.trovo.live/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "19": "images/icon19.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "19": "images/icon19.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}

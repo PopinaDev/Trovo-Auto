@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trovo.live Auto-Commenter By Sami</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Trovo Tools By Sami</h1>
+            <div class="subtitle">Yuriiii Mabwaat Version 0.99</div>
+        </header>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="chat">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                Chat
+            </div>
+            <div class="tab" data-tab="emoji">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                Emoji
+            </div>
+        </div>
+
+        <div class="tab-content">
+            <!-- Chat Section -->
+            <div class="tab-pane active" id="chat-pane">
+                <div class="card">
+                    <div class="form-group">
+                        <label for="message">Messages</label>
+                        <textarea id="message" rows="4" placeholder="Enter messages separated by commas..."></textarea>
+                        <div class="help-text">Example: Hello!, How are you?, Nice stream!</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Interval</label>
+                        <div class="interval-wrapper">
+                            <input type="number" id="interval" min="1" value="5" class="number-input">
+                            <select id="intervalType" class="select-input">
+                                <option value="seconds">Seconds</option>
+                                <option value="minutes">Minutes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button id="toggleChatBtn" class="btn">
+                        <span class="btn-text">Start Auto Chat</span>
+                        <span class="btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </span>
+                    </button>
+                    <div id="chatStatus" class="status"></div>
+                </div>
+            </div>
+
+            <!-- Emoji Section -->
+            <div class="tab-pane" id="emoji-pane">
+                <div class="card">
+                    <div class="form-group">
+                        <label>Click Interval</label>
+                        <div class="interval-wrapper">
+                            <input type="number" id="emojiInterval" min="1" value="5" class="number-input">
+                            <select id="emojiIntervalType" class="select-input">
+                                <option value="seconds">Seconds</option>
+                                <option value="minutes">Minutes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button id="toggleEmojiBtn" class="btn">
+                        <span class="btn-text">Start Auto Emoji</span>
+                        <span class="btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </span>
+                    </button>
+                    <div id="emojiStatus" class="status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
